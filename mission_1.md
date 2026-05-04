@@ -1,76 +1,49 @@
-# Win 1: The Door Shake
+# Glowy Lights Tutorial
 
-## Welcome @unplugged
-Welcome to HQ, Pioneer! Let's build your Intruder Alarm. 
-<br>
-Imagine creating your own **personal alarm** for intruders (*siblings*) entering your bedroom without permission.
-<br><br>
-That's exactly what we are going to learn to do.
+## Introduction @unplugged
+Learn how to control colorful LEDs using the **NeoPixel** extension! We will set up a strip of 8 lights and turn them all red when you press Button A.
 
-## Step 1: The Pulse
-First, we need to confirm the system is awake when we turn it on. 
-<br>
-We will show a **shield** icon.
-
-## Step 2: Show a Shield
-Let's show a shield icon when the system boots up. 
-From the **Toolbox** grab a ``||basic:show icon||`` block, drag it and snap it inside the ``||basic:on start||`` block. 
-<br>
-Click on the *heart* and select any icon that will represent your *shield*.
+## Step 1
+Drag the ``||neopixel:set strip to NeoPixel at pin P0||`` block into the ``||basic:on start||`` block.
 ```blocks
-basic.showIcon(IconNames.Target)
+let strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
 ```
 
-## SENSOR: ACCELEROMETER (Input) @unplugged
+## Step 2
 
-The micro:bit has a tiny **Movement Sensor** inside it. It can feel when a door swings open!
-<br>
-We will use it to tell us when your door is opened.
-<br><br>
-*The sensor is called an **ACCELEROMETER** *.
+Now, let's make the lights turn red.
 
-## Step 4: The Shake Alarm
+Add an ``||input:on button A pressed||`` block. Inside it, place the ``||neopixel:show color red||`` block.
 
-Click on the pink ``||input:Input||`` drawer and grab the ``||input:on shake||`` block and pull it into your workspace.
-
-Inside it, put another ``||basic:show icon||`` block, but this time pick an **Angry Face**!
+Code snippet
 
 ```blocks
-input.onGesture(Gesture.Shake, function () {
-    basic.showIcon(IconNames.Angry)
+input.onButtonPressed(Button.A, function () {
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
 })
 ```
 
-## Step 5: Test the Shake!
+## Step 3
 
-Look at the virtual micro:bit on the left. Click the white **SHAKE** button that appeared. Did the angry face show up?
+Finally, let's make a way to turn the lights off.
 
+Add an `||input:on button B pressed||` block and put a `||neopixel:clear||` block inside it, followed by `||neopixel:show||`.
 
-## CONCEPT: CONDITION @unplugged
-What you coded is called a **CONDITION**.
-<br>
-A *condition* is like a special rule or a promise.<br>
-It tells the computer (Or a person): "Wait until this exact thing happens before you do the other thing!"
-<br><br>
-You can think of it as an **IF / THEN** rule:
-* **Real Life:** **IF** it is raining outside, **THEN** take an umbrella!
-* **Real Life:** **IF** you finish your homework, **THEN** you can play a game!
-* **Our Code:** **IF** the micro:bit shakes, **THEN** show the angry face!
+Code snippet
 
-## TASK: Add your own magic
-Great job! You caught the door moving. 
+```blocks
+input.onButtonPressed(Button.B, function () {
+    strip.clear()
+    strip.show()
+})
+```
 
-Click the **Done** button in the next step to open the full Makecode interface, then try adding your own flair!
-<br>
-Can you make it play a loud alarm sound using the Music blocks when it shakes?
-<br>
+## Done! @unplugged
 
-## Step 6: Win 1 Complete! @unplugged
-When you are ready *(After clicking the **done** button)*, click the **Share** button at the top of the screen and copy your project to the RAD Platform.
-<br>
-Watch the video below if you need help with the steps..
-<br>
+You've finished! Download this to your micro:bit and press **A** to see the glow and **B** to turn it off.
 
-![Click the Share Button](https://vzyraeuyyoytditmfvcc.supabase.co/storage/v1/object/public/course-assets/guides/makecode_interface/gif_makecode_share.gif)
+Code snippet
 
-Copy your link, go back to your RAD Lesson window, and click **Mark Complete**!
+```package
+neopixel
+```
