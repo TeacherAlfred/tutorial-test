@@ -1,6 +1,3 @@
-```package
-neopixel=github:microsoft/pxt-neopixel
-
 # Win 4: Police Lights
 
 ## Welcome Back @unplugged
