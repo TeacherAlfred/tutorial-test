@@ -3,7 +3,7 @@
 
 ## Tutorials
 
-* [tutorial](/tutorial-test/) [start](https://makecode.microbit.org/#tutorial:github:teacheralfred/tutorial-test/mission_1)
+* [tutorial](/mission_1/) [start](https://makecode.microbit.org/#tutorial:github:teacheralfred/tutorial-test/mission_1)
 
 ## Edit this project
 
