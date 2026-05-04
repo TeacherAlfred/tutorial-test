@@ -9,7 +9,7 @@ Drag the ``||neopixel:set strip to NeoPixel at pin P0||`` block into the ``||bas
 let strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
 ```
 
-## Step 2
+## Step 2 description
 
 Now, let's make the lights turn red.
 
