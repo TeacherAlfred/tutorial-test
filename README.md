@@ -3,7 +3,7 @@
 
 ## Tutorials
 
-* [tutorial](/mission_1.md)
+* [tutorial](teacheralfred/tutorial-test/mission_1)
 
 ## Edit this project
 
