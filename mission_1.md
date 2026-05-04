@@ -18,6 +18,7 @@ Add an ``||input:on button A pressed||`` block. Inside it, place the ``||neopixe
 Code snippet
 
 ```blocks
+let strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
 input.onButtonPressed(Button.A, function () {
     strip.showColor(neopixel.colors(NeoPixelColors.Red))
 })
@@ -32,6 +33,7 @@ Add an `||input:on button B pressed||` block and put a `||neopixel:clear||` bloc
 Code snippet
 
 ```blocks
+let strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
 input.onButtonPressed(Button.B, function () {
     strip.clear()
     strip.show()
@@ -42,8 +44,6 @@ input.onButtonPressed(Button.B, function () {
 
 You've finished! Download this to your micro:bit and press **A** to see the glow and **B** to turn it off.
 
-Code snippet
-
 ```package
-neopixel
+neopixel=github:microsoft/pxt-neopixel
 ```
