@@ -1,14 +1,9 @@
 
 > Open this page at [https://teacheralfred.github.io/tutorial-test/](https://teacheralfred.github.io/tutorial-test/)
 
-## Use as Extension
+## Tutorials
 
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/teacheralfred/tutorial-test** and import
+* [tutorial](/mission_1.md)
 
 ## Edit this project
 
